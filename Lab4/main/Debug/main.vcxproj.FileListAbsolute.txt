@@ -1,0 +1,2 @@
+C:\Users\maxim\OneDrive\Desktop\Computing Labs\Lab4\main\Debug\main.exe
+C:\Users\maxim\OneDrive\Desktop\Computing Labs\Lab4\main\Debug\main.pdb
