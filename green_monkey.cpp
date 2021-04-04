@@ -226,8 +226,7 @@ void GreenMonkey::age_me() {
 	
 	int monDeath = getRandomNumber(int(weight), 100);
 	
-	//increment age by 1 while the age isn't greater than 4(maxAge)
-	while (age < maxAge) {
+	
 		age++;
 		//if the random number generated is 0.02, then assign mutant to true i.e, the monkey becomes a mutant
 		if (monAge == 0.02) {
@@ -241,7 +240,7 @@ void GreenMonkey::age_me() {
 		if (injured > 3) {
 			alive = false;
 		}
-	}
+	
 
 }
 void GreenMonkey::fight(GreenMonkey& otherMonkey) {
