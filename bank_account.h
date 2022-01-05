@@ -39,16 +39,20 @@ class Account: public Person {
 private:
     long int accountNumber = 0;
     float currBalance = 0;
+    bool hasAccount = false;
 public:
     Account();
     Account(string, string, int);
     long int get_accountNumber();
     int get_currBalance();
+    bool get_hasAccount();
     void deposit(int cash);
     void withdrawl(int cash);
     void print();
     void set_accountNumber();
     int random_account_number_generator(int, int);
+    bool check_has_account();
+    void create_account();
 };
 
 

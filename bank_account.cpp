@@ -68,7 +68,8 @@ int Account::get_currBalance() {
 }
 
 void Account::set_accountNumber() {
-    int num = random_account_number_generator(00000000, 999999999);
+    int lower_limit = 00000000, upper_limit = 999999999;
+    int num = random_account_number_generator(lower_limit, upper_limit);
     this->accountNumber = num;
 }
 
@@ -92,9 +93,20 @@ void Account::print() {
     cout << left << setw(15) << this->get_fname() << setw(15) << this->get_lname() << setw(15) << this->currBalance << endl;
 }
 
+bool Account::get_hasAccount() {
+    return this->hasAccount;
+}
+
+bool Account::check_has_account() {
+    bool check;
+    return check = (this->accountNumber == 0) ? false : true;
+}
+
 int Account::random_account_number_generator(int lower_limit, int upper_limit) {
     unsigned int seed = chrono::steady_clock::now().time_since_epoch().count();
     default_random_engine ranGen(seed);
     uniform_int_distribution<int>random_number(lower_limit, upper_limit);
     return random_number(ranGen);
 }
+
+
