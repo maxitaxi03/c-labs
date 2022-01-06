@@ -61,6 +61,7 @@ Account::Account(string fname, string lname, int age) {
     this->set_fname(fname);
     this->set_lname(lname);
     this->set_age(age);
+    set_accountNumber();
 }
 
 int Account::get_currBalance() {
